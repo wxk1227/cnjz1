@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xcy.dao.CaseMapper">
+
+
+    <select id="selectAllCase" resultType="com.xcy.pojo.Cases">
+        select * from case
+    </select>
+
+    <select id="selectById" resultType="java.lang.Integer">
+        select * from case by id
+    </select>
+
+    <select id="selectByName" resultType="java.lang.Integer">
+        select * from case by name and name like '%#{name}%'
+    </select>
+
+    <insert id="insertCases"></insert>
+
+    <update id="updateCases"></update>
+
+</mapper>
